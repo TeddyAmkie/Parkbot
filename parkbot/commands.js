@@ -6,7 +6,6 @@ class Commands {
   }
 
   locate(location) {
-    console.log("location is", location);
     let locations = []
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i].address.state === location) {

@@ -1,6 +1,5 @@
 const argv = process.argv;
-const axios = require('axios');
-const Parkbot = require('./parkbot.js');
+const Parkbot = require('./commands.js');
 const fs = require('fs');
 
 

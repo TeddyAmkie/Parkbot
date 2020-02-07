@@ -1,4 +1,10 @@
-npm install
+### Set-up
+
+```npm install```
+
+### Tests
+
+``` jest ```
 
 
 ### Monolith vs Microservice
@@ -7,4 +13,3 @@ npm install
 
 
 
-  
