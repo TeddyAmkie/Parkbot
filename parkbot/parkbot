@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+const argv = process.argv;
+const { Search } = require('./search.js');
+const fs = require('fs');
+
+
+async function main(path) {
+  fs.readFile(path, 'utf8', function processFile(err, data) {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+    const command = argv[3]
+    let parameters = argv[4]
+    if (command === undefined || parameters === undefined) {
+      throw new Error("Please enter a proper command and parameters.")
+    }
+
+
+    data = JSON.parse(data);
+    let parkbot = new Search(data)
+    if (command === "locate") {
+      if (parameters.length !== 2) {
+        throw new Error("Please enter 2-letter State abbreviation.")
+      }
+      else if (parameters) {
+
+        console.log(parkbot.locate(parameters));
+      }
+    }
+    else if (command === "find_price_hourly_lte") {
+      console.log(parkbot.findPriceHourlyLte(parameters))
+    }
+    else if (command === "find_price_hourly_gt") {
+      console.log(parkbot.findPriceHourlyGt(parameters))
+    }
+    else {
+      throw new Error("Please enter a valid command.");
+    }
+  })
+}
+
+try {
+  main(argv[2]);
+} catch (err) {
+  console.log(err);
+}

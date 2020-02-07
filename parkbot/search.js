@@ -1,35 +1,39 @@
+let states = require("./states.json");
 
-// Pass in 
-class Commands {
+class Search {
   constructor(data) {
-    this.data = data
+    this.data = data;
   }
 
   locate(location) {
-    let locations = []
+    location = location.toUpperCase();
+    if (!states[location]) {
+      throw new Error("That is not a valid US state.");
+    }
+    let locations = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i].address.state === location) {
-        locations.push(this.data[i].name)
+        locations.push(this.data[i].name);
       }
     }
     return locations;
   }
 
   findPriceHourlyLte(price) {
-    let locations = []
+    let locations = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i].price_hourly <= price) {
-        locations.push(this.data[i].name)
+        locations.push(this.data[i].name);
       }
     }
     return locations;
   }
 
   findPriceHourlyGt(price) {
-    let locations = []
+    let locations = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i].price_hourly > price) {
-        locations.push(this.data[i].name)
+        locations.push(this.data[i].name);
       }
     }
     return locations;
@@ -37,5 +41,5 @@ class Commands {
 }
 
 module.exports = {
-  Commands
+  Search
 }
