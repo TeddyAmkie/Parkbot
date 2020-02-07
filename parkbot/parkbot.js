@@ -15,6 +15,26 @@ class Commands {
     }
     return locations;
   }
+
+  findPriceHourlyLte(price) {
+    let locations = []
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i].price_hourly <= price) {
+        locations.push(this.data[i].name)
+      }
+    }
+    return locations;
+  }
+
+  findPriceHourlyGt(price) {
+    let locations = []
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i].price_hourly > price) {
+        locations.push(this.data[i].name)
+      }
+    }
+    return locations;
+  }
 }
 
 module.exports = {

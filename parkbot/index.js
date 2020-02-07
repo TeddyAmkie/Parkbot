@@ -16,10 +16,10 @@ async function main(path) {
       console.log(ParkBot.locate(argv[4]));
     }
     else if (argv[3] === "find_price_hourly_lte") {
-      return console.log("Coming soon!")
+      console.log(ParkBot.findPriceHourlyLte(argv[4]))
     }
     else if (argv[3] === "find_price_hourly_gt") {
-      console.log("Coming soon!")
+      console.log(ParkBot.findPriceHourlyGt(argv[4]))
     }
     else {
       throw new Error("Please enter a valid command.");
