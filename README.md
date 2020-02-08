@@ -11,11 +11,6 @@ Install packages:
 cd parkbot
 npm install
 ```
-Add the script to run from terminal properly:
-
-```
-chmod +x parkbot
-```
 
 ### Running the ParkBot Script:
 
