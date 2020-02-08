@@ -12,30 +12,33 @@ cd parkbot
 npm install
 ```
 Add the script to run from terminal properly:
-```chmod +x parkbot```
+
+```
+chmod +x parkbot
+```
 
 ### Running the ParkBot Script:
 
-./parkbot airgarage-data.json [command] [argument]
+```./parkbot airgarage-data.json [command] [argument]```
 
 Possible commands:
 
 #### Locate - Locate all locations within a state(2-letter abreviation only):
 
-./parkbot airgarage-data.json locate [location]
+```./parkbot airgarage-data.json locate [location]```
 
 ```./parkbot airgarage-data.json locate CA``
 
-Expected output:
+##### Expected output:
 ```Tempe Beach Park, Safeway, Azusa Ramen```
 
 #### find_price_hourly_lte - Find prices lower or equal to the argument given(in cents).
 
-./parkbot airgarage-data.json find_price_hourly_lte [price]
+```./parkbot airgarage-data.json find_price_hourly_lte [price]```
 
 ```./parkbot airgarage-data.json find_price_hourly_lte 200```
 
-Expected output:
+##### Expected output:
 [ 'Church of 8 Wheels',
   'Tempe Beach Park',
   'AirGarage HQ',
@@ -47,11 +50,11 @@ Expected output:
 
 #### find_price_hourly_lte - Find prices lower or equal to the argument given(in cents).
 
-./parkbot airgarage-data.json find_price_hourly_lte [price]
+```./parkbot airgarage-data.json find_price_hourly_lte [price]```
 
 ```./parkbot airgarage-data.json find_price_hourly_gt 200```
 
-Expected output:
+##### Expected output:
 [ 'Sweetgreen', 'Sandwiches n More', 'Azusa Ramen' ]
 
 ### Tests
