@@ -4,7 +4,7 @@ Challenge link: https://gist.github.com/scottfits/e4f7a2e607934a6bd2f62395214562
 ### Install Instructions
 
 Clone the repo: 
-```git clone https://github.com/TeddyAmkie/Parkbot/tree/master/parkbot```
+```git clone https://github.com/TeddyAmkie/Parkbot```
 
 Install packages:
 ```
