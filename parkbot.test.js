@@ -1,6 +1,6 @@
 const { Search } = require("./search.js")
 
-const data = require("./data.json")
+const data = require("./airgarage-data.json")
 
 describe("Parkbot", function () {
   let Parkbot = new Search(data);
