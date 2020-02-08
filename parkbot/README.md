@@ -16,21 +16,48 @@ Add the script to run from terminal properly:
 
 ### Running the ParkBot Script:
 
-Once in the github repo, you are capable of running the following commands:
+./parkbot airgarage-data.json [command] [argument]
 
-Locate - Locate all locations within a state(2-letter abreviation only):
+Possible commands:
 
-```./parkbot data.json locate AZ```
+#### Locate - Locate all locations within a state(2-letter abreviation only):
+
+./parkbot airgarage-data.json locate [location]
+
+```./parkbot airgarage-data.json locate CA``
 
 Expected output:
 ```Tempe Beach Park, Safeway, Azusa Ramen```
 
+#### find_price_hourly_lte - Find prices lower or equal to the argument given(in cents).
+
+./parkbot airgarage-data.json find_price_hourly_lte [price]
+
+```./parkbot airgarage-data.json find_price_hourly_lte 200```
+
+Expected output:
+[ 'Church of 8 Wheels',
+  'Tempe Beach Park',
+  'AirGarage HQ',
+  'Safeway',
+  'Walgreens',
+  'Goldilocks Pizza',
+  'The Salon',
+  'Archer Salon' ]
+
+#### find_price_hourly_lte - Find prices lower or equal to the argument given(in cents).
+
+./parkbot airgarage-data.json find_price_hourly_lte [price]
+
+```./parkbot airgarage-data.json find_price_hourly_gt 200```
+
+Expected output:
+[ 'Sweetgreen', 'Sandwiches n More', 'Azusa Ramen' ]
 
 ### Tests
 To run the test suite:
 
 ```
-cd parkbot
  jest ```
 
 
