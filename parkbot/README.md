@@ -60,8 +60,4 @@ Possible commands:
 ### Tests
 To run the test suite:
 
-```
- jest ```
-
-
-
+```jest```
