@@ -27,7 +27,7 @@ Possible commands:
 
 ```./parkbot airgarage-data.json locate [location]```
 
-```./parkbot airgarage-data.json locate CA``
+```./parkbot airgarage-data.json locate CA```
 
 ##### Expected output:
 ```Tempe Beach Park, Safeway, Azusa Ramen```
@@ -48,7 +48,7 @@ Possible commands:
   'The Salon',
   'Archer Salon' ]
 
-#### find_price_hourly_lte - Find prices lower or equal to the argument given(in cents).
+#### find_price_hourly_lte - Find prices greater than the argument given(in cents).
 
 ```./parkbot airgarage-data.json find_price_hourly_lte [price]```
 
