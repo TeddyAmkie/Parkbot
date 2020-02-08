@@ -10,9 +10,6 @@ describe("Parkbot", function () {
       let results = Parkbot.locate("AZ")
       expect(results).toEqual(['Tempe Beach Park', 'Safeway', 'Azusa Ramen'])
     })
-    // test("Test that location is a valid state.", function () {
-
-    // })
     test("Test that a lower-case location works", function() {
       let results = Parkbot.locate("az")
       expect(results).toEqual(['Tempe Beach Park', 'Safeway', 'Azusa Ramen'])

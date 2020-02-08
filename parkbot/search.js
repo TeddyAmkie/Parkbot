@@ -10,16 +10,20 @@ class Search {
     if (!states[location]) {
       throw new Error("That is not a valid US state.");
     }
+
     let locations = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i].address.state === location) {
         locations.push(this.data[i].name);
+        }
       }
-    }
-    return locations;
+      return locations;
   }
 
   findPriceHourlyLte(price) {
+    if (isNaN(price)) {
+      throw new Error("That's not a number!");
+    }
     let locations = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i].price_hourly <= price) {
@@ -30,6 +34,9 @@ class Search {
   }
 
   findPriceHourlyGt(price) {
+    if (isNaN(price)) {
+      throw new Error("That's not a number!");
+    }
     let locations = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i].price_hourly > price) {

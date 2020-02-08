@@ -19,18 +19,23 @@ async function main(path) {
 
     data = JSON.parse(data);
     let parkbot = new Search(data)
+
+    // Locate
     if (command === "locate") {
       if (parameters.length !== 2) {
         throw new Error("Please enter 2-letter State abbreviation.")
       }
       else if (parameters) {
-
         console.log(parkbot.locate(parameters));
       }
     }
+
+    // Find lower prices
     else if (command === "find_price_hourly_lte") {
       console.log(parkbot.findPriceHourlyLte(parameters))
     }
+
+    // Find greater prices
     else if (command === "find_price_hourly_gt") {
       console.log(parkbot.findPriceHourlyGt(parameters))
     }
